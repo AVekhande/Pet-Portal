@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/css/login-reg.css">
+</head>
+<body>
+    <div class="background-icons">
+        <!-- Add icons for admin-themed background -->
+        <i class="fas fa-cogs" style="top: 10%; left: 5%;"></i>
+        <i class="fas fa-user-shield" style="top: 20%; right: 10%;"></i>
+        <i class="fas fa-key" style="top: 30%; left: 15%;"></i>
+        <i class="fas fa-users-cog" style="top: 40%; right: 25%;"></i>
+        <i class="fas fa-tachometer-alt" style="top: 10%; left: 30%;"></i>
+    </div>
+    <div class="login-container">
+        <div class="loginForm">
+            <h1>Welcome Admin</h1>
+            <p>Log in to Admin Portal</p>
+            <p id="error-message" style="color: red;"></p>
+            <form action="/admin/login" method="post">
+                <div class="UserInfo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> 
+                </div>
+                <div class="UserInfo">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <p class="forgot-password"><a href="/forgot-password">Forgot Password?</a></p>
+            <p>Are you an User ? <a href="/html/Login.html">Login</a></p>
+        </div>
+        <div class="petImg">
+            <img src="https://i.pinimg.com/originals/4b/41/10/4b411030902b52209d6931d3b15b750c.gif" alt="Admin Icon">
+        </div>
+    </div>
+</body>
+</html>

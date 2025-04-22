@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons in Background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            /* background-color: #282c34; */
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .background-icons {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .background-icons i {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-icons">
+        <i class="fas fa-bone" style="top: 10%; left: 5%;"></i>
+        <i class="fas fa-dog" style="top: 20%; right: 10%;"></i>
+        <i class="fas fa-cat" style="top: 30%; left: 15%;"></i>
+        <i class="fas fa-fish" style="top: 40%; right: 25%;"></i>
+        <i class="fas fa-bowl-food" style="top: 10%; left: 30%;"></i>
+        <i class="fas fa-paw" style="top: 97%; right: 25%;"></i>
+        <i class="fas fa-bone" style="bottom: 30%; left: 10%;"></i>
+        <i class="fas fa-dog" style="bottom: 30%; right: 15%;"></i>
+        <i class="fas fa-paw" style="top: 70%; right: 30%;"></i>
+        <i class="fas fa-bone" style="bottom: 25%; left: 45%;"></i>
+        <i class="fas fa-bowl-food" style="top: 120%; left: 30%;"></i>
+        <i class="fas fa-cat" style="top: 90%; left: 15%;"></i>
+        <i class="fas fa-fish" style="top: 95%; right: 5%;"></i>
+        <i class="fas fa-dog" style="top: 90%; right: 40%;"></i>
+    </div>
+</body>
+</html>

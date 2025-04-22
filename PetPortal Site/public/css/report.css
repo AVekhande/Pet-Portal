@@ -1,0 +1,263 @@
+/* For both adaoption.html and missing.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: linear-gradient(#fbc2eb, #faf1a2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* padding: 20px; */
+    overflow-x: hidden;
+    /* margin: 10px; */
+}
+
+.navbar {
+    width: 95%;
+    background: #faf1a2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 40px;
+    box-sizing: content-box;
+}
+
+.navbar .logo {
+    padding-right: 200px;
+}
+
+.logo img {
+    width: 340px;
+    height: 285px;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    left: -100px;
+    top: -2px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.highlight-link {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.highlight-link:hover {
+    border-color: #000000;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Container for Both Forms */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f78a0f;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+/* Form Elements */
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #f78a0f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ac5d04;
+}
+
+/* Image Upload Preview */
+#previewContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    display: block;
+}
+
+#previewContainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Specific Styles for Missing Pet Report */
+#missingPetForm #reportId {
+    background: #f3f3f3;
+    cursor: not-allowed;
+}
+
+/* Share Section (Only for Missing Pets) */
+#shareSection {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+#reportLink {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#missingReportsBtn {
+    position: fixed;
+    right: 85px;
+    top: 25%;
+    transform: translateY(-50%);
+    background: linear-gradient(#faf1a2, #ef8c29);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#missingReportsBtn a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#missingReportsBtn:hover {
+    background-color: #e68900;
+}
+
+#missingReportsBtn h3 {
+    color: #000;
+}
+
+footer {
+    background-color: #ffcc80;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 3px solid #ff9800;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    /* margin: 0 auto; */
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #6d4c41;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #d84315;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6d4c41;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #020202;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-link {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6d4c41;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Portal</title>
+    <link rel="stylesheet" href="/css/section.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/Images/IMG_6936.PNG" width="110" height="90">
+        </div>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/html/section.html">Portal</a>
+            <a href="/html/Login.html" id="authLink" class="highlight-link">Login</a>
+        </div>
+    </nav>
+
+    <h1>Pet Portal</h1>
+    <div class="background-icons">
+        <i class="fas fa-bone" style="top: 10%; left: 5%;"></i>
+        <i class="fas fa-dog" style="top: 20%; right: 10%;"></i>
+        <i class="fas fa-cat" style="top: 30%; left: 15%;"></i>
+        <i class="fas fa-fish" style="top: 40%; right: 25%;"></i>
+        <i class="fas fa-bowl-food" style="top: 50%; left: 30%;"></i>
+        <i class="fas fa-paw" style="top: 60%; right: 20%;"></i>
+        <i class="fas fa-bone" style="bottom: 20%; left: 10%;"></i>
+        <i class="fas fa-dog" style="bottom: 30%; right: 15%;"></i>
+    </div>
+    <div class="circle">
+        <div class="hexagon">
+            <a href="/html/missing.html">Missing Pet Report</a>
+        </div>
+        <div class="hexagon">
+            <a href="/html/adoption.html">Pet Adoption Report</a>
+        </div>
+        <div class="hexagon">
+            <a href="/html/accessories.html">Accessories & Food</a>
+        </div>
+        <div class="hexagon">
+            <a href="/html/maps.html">Nearby Vets</a>
+        </div>
+        <div class="hexagon">
+            <a href="/html/hygiene.html">Pet Hygiene</a>
+        </div>
+        <div class="hexagon">
+            <a href="/html/chat_ui.html">Community Chat</a>
+        </div>
+    </div>
+    <footer>
+        <h2 id="pettitle">PetPortal</h2>
+
+        <p class="contact-info">
+            📞 Phone: <a href="tel:9321863490">9321863490</a>
+            <br>
+            ✉ Email: <a href="mailto:petportal2025@gmail.com">petportal2025@gmail.com</a>
+        </p>
+
+        <p class="nav-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+
+        <div class="social-icons">
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384065.png" alt="Twitter">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384067.png" alt="Instagram">
+            </a>
+        </div>
+
+        <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p>
+    </footer>
+    <script>
+        async function checkUserLogin() {
+    try {
+        const response = await fetch("/profile");
+        const data = await response.json();
+
+        const authLink = document.getElementById("authLink");
+        if (response.ok) {
+            authLink.textContent = "Logout";
+            authLink.href = "#"; 
+            authLink.onclick = logout;
+        } else {
+            authLink.textContent = "Login";
+            authLink.href = "/html/Login.html";
+            authLink.onclick = null; 
+        }
+    } catch (error) {
+        console.error("Error fetching user:", error);
+        document.getElementById("authLink").textContent = "Login";
+        document.getElementById("authLink").href = "/html/Login.html";
+        // document.getElementById("user-greeting").style.display = "none"; 
+    }
+}
+
+function logout() {
+    fetch('/logout').then(() => {
+        window.location.href = '/'; 
+    });
+}
+
+checkUserLogin();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Hygiene</title>
+    <link rel="stylesheet" href="/css/hygiene.css" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@400"
+    />
+  </head>
+
+  <body>
+
+    <div class="background-icons">
+      <i class="fas fa-bone" style="top: 10%; left: 5%;"></i>
+      <i class="fas fa-dog" style="top: 20%; right: 10%;"></i>
+      <i class="fas fa-cat" style="top: 30%; left: 15%;"></i>
+      <i class="fas fa-fish" style="top: 40%; right: 25%;"></i>
+      <i class="fas fa-bowl-food" style="top: 10%; left: 30%;"></i>
+      <i class="fas fa-paw" style="top: 130%; left: 5%;"></i>
+      <i class="fas fa-bone" style="bottom: 50%; right: 10%;"></i>
+      <i class="fas fa-dog" style="bottom: 30%; right: 15%;"></i>
+      <i class="fas fa-paw" style="top: 70%; right: 30%;"></i>
+      <i class="fas fa-bone" style="bottom: 25%; left: 5%;"></i>
+      <i class="fas fa-bowl-food" style="top: 120%; left: 30%;"></i>
+      <i class="fas fa-cat" style="top: 90%; left: 15%;"></i>
+      <i class="fas fa-fish" style="top: 95%; right: 5%;"></i>
+      <i class="fas fa-dog" style="top: 90%; right: 40%;"></i>
+   </div>
+    <!-- <button id="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-rounded">close</span>
+    </button> -->
+
+    <nav class="navbar">
+      <div class="logo">
+         <img src="/Images/IMG_6936.PNG" width="110" height="90">
+      </div>
+      <div class="nav-links">
+         <a href="/index.html">Home</a>
+         <a href="/html/section.html">Portal</a>
+         <a href="/html/Login.html"  id="authLink" class="highlight-link">Login</a>
+      </div>
+   </nav>
+
+    <header>
+      <h1 id="title-pet">🐾 Pet Hygiene 🐾</h1>
+    </header>
+    <section class="hygiene-section">
+      <div class="card" id="bathing">
+        <img
+          src="https://media.istockphoto.com/id/1393558296/photo/dog-taking-bath-at-home-n.jpg?s=612x612&w=0&k=20&c=PZD3P1wHTkUN7AJifSoFqGuyYOgs1bDkVE45j7rLPR4="
+          alt="Bathing Pet"
+          class="card-img"
+        />
+        <h2>Bathing</h2>
+        <p>Use pet-friendly shampoo and lukewarm water.</p>
+        <button onclick="showTip('bathing-tip')">Tip</button>
+        <p class="tip" id="bathing-tip">
+          Bathe your pet once a month to maintain skin health.
+        </p>
+      </div>
+
+      <div class="card" id="grooming">
+        <img
+          src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147569900/images/adf34a-ef80-2f24-cb5-c3a6a2edb36f_Cat-Grooming-101_Main-Page_1508x940_.jpg"
+          alt="Grooming Pet"
+          class="card-img"
+        />
+        <h2>Grooming</h2>
+        <p>Regular brushing keeps fur clean and reduces shedding.</p>
+        <button onclick="showTip('grooming-tip')">Tip</button>
+        <p class="tip" id="grooming-tip">
+          Brush your pet at least twice a week.
+        </p>
+      </div>
+
+      <div class="card" id="dental">
+        <img
+          src="https://www.pineridgepetclinic.com/wp-content/uploads/2024/04/Veterinarian-brushing-teeth-of-Labrador-puppy-in-clinic.jpg"
+          alt="Dental Care"
+          class="card-img"
+        />
+        <h2>Dental Care</h2>
+        <p>Use pet-safe toothpaste and dental chews.</p>
+        <button onclick="showTip('dental-tip')">Tip</button>
+        <p class="tip" id="dental-tip">
+          Brush your pet’s teeth 2-3 times a week.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="hygiene-section">
+      <div class="card" id="paws">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/038/453/971/small_2x/ai-generated-eager-dog-stands-on-the-floor-paws-lifted-in-anticipation-awaiting-playtime-ai-generated-photo.jpeg"
+          alt="Paw Cleaning"
+          class="card-img"
+        />
+        <h2>Paw Cleaning</h2>
+        <p>Wipe paws after walks to remove dirt and germs.</p>
+        <button onclick="showTip('paws-tip')">Tip</button>
+        <p class="tip" id="paws-tip">Check for cuts or infections regularly.</p>
+      </div>
+
+      <div class="card" id="nails">
+        <img src="https://weareallaboutcats.com/wp-content/uploads/2021/06/Kitty-Claw-Control-How-and-When-to-Cut-Your-Cats-Nails.jpg" alt="Nail Trimming Image">
+        <h2>Nail Trimming</h2>
+        <p>Keep nails trimmed to avoid discomfort and injury.</p>
+        <button onclick="showTip('nails-tip')">Tip</button>
+        <p class="tip" id="nails-tip">Trim nails every 3-4 weeks to prevent overgrowth.</p>
+    </div>
+
+    <div class="card" id="ears">
+      <img src="https://cdn.prod.website-files.com/61605770a2776f05aa1e318c/66d0733dd0d66303c00b2cbb_How%20to%20Clean%20a%20Dog%27s%20Ears_%20The%20Best%20%26%20Safest%20Method%20%5BVet-Approved%5D%20%20-%20MAIN.webp" alt="Ear Cleaning Image">
+      <h2>Ear Cleaning</h2>
+      <p>Check and clean ears to prevent infections.</p>
+      <button onclick="showTip('ears-tip')">Tip</button>
+      <p class="tip" id="ears-tip">Use a vet-recommended ear cleaner once a week.</p>
+  </div>
+
+    
+    </section>
+
+    <section class="hygiene-section">
+      <div class="card" id="eye-care">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIdEyciSOzx8koDiGghpXPBb6PHM0MbsHDig&s"
+          alt="Pet Eye Care"
+          class="card-img"
+        />
+        <h2>Eye Care</h2>
+        <p>Keep the area around the eyes clean and free from discharge.</p>
+        <button onclick="showTip('eye-care-tip')">Tip</button>
+        <p class="tip" id="eye-care-tip">Wipe gently with a damp cloth once a day.</p>
+      </div>
+    
+      <div class="card" id="fur-trimming">
+        <img
+          src="https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/canvas/2023/07/19/99ae4ee4-91a7-431e-8bb5-b9a90a2dfe84_80020571.jpg?itok=o4o45iev&v=1689699261"
+          alt="Fur Trimming"
+          class="card-img"
+        />
+        <h2>Fur Trimming</h2>
+        <p>Trim overgrown fur to prevent matting and overheating.</p>
+        <button onclick="showTip('fur-trimming-tip')">Tip</button>
+        <p class="tip" id="fur-trimming-tip">Focus on areas like paws, belly, and tail.</p>
+      </div>
+    
+      <div class="card" id="skin-care">
+        <img
+          src="https://d2zp5xs5cp8zlg.cloudfront.net/image-93497-800.jpg"
+          alt="Pet Skin Care"
+          class="card-img"
+        />
+        <h2>Skin Care</h2>
+        <p>Check your pet's skin for dryness, flakes, or hot spots.</p>
+        <button onclick="showTip('skin-care-tip')">Tip</button>
+        <p class="tip" id="skin-care-tip">Add omega-3 fatty acids to their diet for healthier skin.</p>
+      </div>
+    </section>
+
+    <section class="hygiene-section">
+      <div class="card" id="flea-care">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBJ6rIBOn4LrH8TPDfeJ8vlPfrz_uAJJxSig&s"
+          alt="Flea and Tick Control"
+          class="card-img"
+        />
+        <h2>Flea & Tick Control</h2>
+        <p>Use regular treatments to prevent infestations.</p>
+        <button onclick="showTip('flea-care-tip')">Tip</button>
+        <p class="tip" id="flea-care-tip">Apply monthly preventatives recommended by your vet.</p>
+      </div>
+    
+      <div class="card" id="shedding-control">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwfqoVBUuEXIyr7iTkgLGZ67EBtoRfKjoigQ&s"
+          alt="Shedding Control"
+          class="card-img"
+        />
+        <h2>Shedding Control</h2>
+        <p>Use de-shedding tools to manage seasonal shedding.</p>
+        <button onclick="showTip('shedding-tip')">Tip</button>
+        <p class="tip" id="shedding-tip">Brush daily during peak shedding seasons.</p>
+      </div>
+    
+      <div class="card" id="sanitary-trimming">
+        <img
+          src="https://i0.wp.com/www.groomertogroomer.com/wp-content/uploads/2022/10/sani-1-4.png?ssl=1"
+          alt="Sanitary Trimming"
+          class="card-img"
+        />
+        <h2>Sanitary Trimming</h2>
+        <p>Trim fur around private areas to maintain hygiene.</p>
+        <button onclick="showTip('sanitary-tip')">Tip</button>
+        <p class="tip" id="sanitary-tip">Use blunt-tipped scissors for safety.</p>
+      </div>
+    </section>    
+
+    <footer>
+      <h2 id="pettitle">PetPortal</h2>
+  
+      <p class="contact-info">
+          📞 Phone: <a href="tel:9321863490">9321863490</a>  
+          <br>
+          ✉ Email: <a href="mailto:petportal2025@gmail.com">petportal2025@gmail.com</a>
+      </p>
+  
+      <p class="nav-links">
+          <a href="about.html">About Us</a> |
+          <a href="contact.html">Contact</a> |
+          <a href="privacy.html">Privacy Policy</a>
+      </p>
+  
+      <div class="social-icons">
+          <a href="#" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook">
+          </a>
+          <a href="#" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/24/1384/1384065.png" alt="Twitter">
+          </a>
+          <a href="#" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/24/1384/1384067.png" alt="Instagram">
+          </a>
+      </div>
+  
+      <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p>
+  </footer> 
+
+    <script src="/js/hygiene.js"></script>
+    <script>
+      async function checkUserLogin() {
+  try {
+      const response = await fetch("/profile");
+      const data = await response.json();
+
+      const authLink = document.getElementById("authLink");
+      if (response.ok) {
+          authLink.textContent = "Logout";
+          authLink.href = "#"; 
+          authLink.onclick = logout;
+      } else {
+          authLink.textContent = "Login";
+          authLink.href = "/html/Login.html";
+          authLink.onclick = null; 
+      }
+  } catch (error) {
+      console.error("Error fetching user:", error);
+      document.getElementById("authLink").textContent = "Login";
+      document.getElementById("authLink").href = "/html/Login.html";
+  }
+}
+
+function logout() {
+  fetch('/logout').then(() => {
+      window.location.href = '/'; 
+  });
+}
+
+checkUserLogin();
+  </script>
+  </body>
+</html>

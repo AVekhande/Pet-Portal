@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login-reg.css">
+</head>
+<body>
+    <div class="background-icons">
+        <i class="fas fa-bone" style="top: 10%; left: 5%;"></i>
+        <i class="fas fa-dog" style="top: 20%; right: 10%;"></i>
+        <i class="fas fa-cat" style="top: 30%; left: 15%;"></i>
+        <i class="fas fa-fish" style="top: 40%; right: 25%;"></i>
+        <i class="fas fa-bowl-food" style="top: 10%; left: 30%;"></i>
+        <i class="fas fa-paw" style="top: 97%; right: 25%;"></i>
+        <i class="fas fa-bone" style="bottom: 30%; left: 10%;"></i>
+        <i class="fas fa-dog" style="bottom: 30%; right: 15%;"></i>
+        <i class="fas fa-paw" style="top: 70%; right: 30%;"></i>
+        <i class="fas fa-bone" style="bottom: 65%; left: 40%;"></i>
+        <i class="fas fa-bowl-food" style="top: 120%; left: 30%;"></i>
+        <i class="fas fa-cat" style="top: 90%; left: 15%;"></i>
+        <i class="fas fa-fish" style="top: 95%; right: 5%;"></i>   
+    </div>
+       <div class="login-container">
+        <div class="loginForm">
+            <h1>Welcome Back</h1>
+            <p>Log in to Pet Portal</p>
+            <!-- Add error message placeholder -->
+            <p id="error-message" style="color: red;"></p>
+            <form action="/login" method="post">
+                <div class="UserInfo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> 
+                </div>
+                <div class="UserInfo">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <p class="forgot-password"><a href="/forgot-password">Forgot Password?</a></p>
+            <p class="signup">Don't have an account? <a href="/html/registration.html">Sign Up</a></p>
+            <!-- <p class="signup">Are you admin? <a href="/html/admin-login.html">Admin Login</a></p> -->
+             <p>Go back to Home Page!! <a href="/index.html"> Home</a></p>
+        </div>
+        <div class="petImg">
+            <img src="https://i.pinimg.com/originals/4b/41/10/4b411030902b52209d6931d3b15b750c.gif" alt="Cute cat">
+        </div>
+       </div>
+</body>
+</html>

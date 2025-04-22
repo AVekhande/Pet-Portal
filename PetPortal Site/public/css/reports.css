@@ -1,0 +1,266 @@
+/* CSS for reports2.html and adopt-view.html */
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient( #fbc2eb, #faf1a2); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 95%;
+    background: #faf1a2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 40px;
+    box-sizing: content-box;
+}
+
+.navbar .logo {
+    padding-right: 200px;
+}
+
+.logo img {
+    width: 340px;
+    height: 285px;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    left: -100px;
+    top: -2px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.highlight-link {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.highlight-link:hover {
+    border-color: #000000;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px; 
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#reportsContainer {
+    width: 100%;
+}
+
+#adoptionContainer {
+    width: 100%;
+}
+
+.report-card {
+    background: #faf1a2;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.report-card:hover {
+    transform: scale(1.02); 
+}
+
+.report-card p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.report-card strong {
+    font-weight: bold;
+    color: #222;
+}
+
+.adoption-card {
+    background:  #fff8ab;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.adoption-card:hover {
+    transform: scale(1.02); 
+}
+
+.adoption-card p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.adoption-card strong {
+    font-weight: bold;
+    color: #222;
+}
+
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap on small screens */
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.image-gallery img {
+    max-width: 180px;
+    max-height: 180px;
+    margin: 5px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures uniform display */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .image-gallery img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .report-card {
+        padding: 10px;
+    }
+
+    .report-card p {
+        font-size: 14px;
+    }
+}
+
+footer {
+    background-color: #ffcc80;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 3px solid #ff9800;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    /* margin: 0 auto; */
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #6d4c41;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #d84315;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6d4c41;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #020202;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-link {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6d4c41;
+}
+
+/* Capture & Share Button Styling */
+.share-btn {
+    background:  #f59433; /* Gradient background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    display: block;
+    margin: 10px auto;
+}
+
+.share-btn:hover {
+    background-color: #8e461b; /* Darker green on hover */
+}
+

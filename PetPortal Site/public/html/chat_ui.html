@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+   <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/chat.css" />
+    <title>Community</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+           <img src="/Images/IMG_6936.PNG" width="110" height="90">
+        </div>
+        <div class="nav-links">
+           <a href="/index.html">Home</a>
+           <a href="/html/section.html">Portal</a>
+           <a href="/html/Login.html"  id="authLink" class="highlight-link">Login</a>
+        </div>
+     </nav>
+
+    <div class="join-container">
+        <header class="join-header">
+            <h1>🐾 Community</h1>
+        </header>
+        <main class="join-main">
+            <form id="join-form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username..." required />
+                </div>
+                <div class="form-control">
+                    <label for="room">Room</label>
+                    <select name="room" id="room">
+                        <option value="Dog Owners">Dog Owners</option>
+                        <option value="Cat Owners">Cat Owners</option>
+                        <option value="Pet Adoption">Pet Adoption</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Join Chat</button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <h2 id="pettitle">PetPortal</h2>
+    
+        <p class="contact-info">
+            📞 Phone: <a href="tel:9321863490">9321863490</a>  
+            <br>
+            ✉ Email: <a href="mailto:petportal2025@gmail.com">petportal2025@gmail.com</a>
+        </p>
+    
+        <p class="nav-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    
+        <div class="social-icons">
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384065.png" alt="Twitter">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384067.png" alt="Instagram">
+            </a>
+        </div>
+    
+        <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p>
+    </footer>  
+
+    <script src="https://cdn.jsdelivr.net/npm/qs@6.14.0/dist/qs.min.js"></script>
+    <script>
+        document.getElementById("join-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const room = document.getElementById("room").value;
+
+            if (username && room) {
+                window.location.href = `/html/chat.html?username=${encodeURIComponent(username)}&room=${encodeURIComponent(room)}`;
+            } else {
+                alert("Please enter a username and select a room.");
+            }
+        });
+    </script>
+</body>
+</html>

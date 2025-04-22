@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Pet Report</title>
+    <link rel="stylesheet" href="/css/report.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+           <img src="/Images/IMG_6936.PNG" width="110" height="90">
+        </div>
+        <div class="nav-links">
+           <a href="/index.html">Home</a>
+           <a href="/html/section.html">Portal</a>
+           <a href="/html/Login.html"  id="authLink" class="highlight-link">Login</a>
+        </div>
+     </nav>
+
+    <div class="container">
+        <h2>Report a Missing Pet</h2>
+
+        <div id="missingReportsBtn">
+            <h3>Browse All Missing Pet Reports</h3>
+            <p>⬇️</p>
+            <a href="reports2.html">Missing Reports</a>
+        </div>
+
+        <form action="/submit-report" method="POST" id="missingPetForm" enctype="multipart/form-data">
+            <label for="reportId">Report ID:</label>
+            <input type="text" id="reportId" name="reportId" readonly>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="petType">Type of Pet:</label>
+            <select id="petType" name="petType" required>
+                <option value="">Select</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="specialMark">Special Mark:</label>
+            <input type="text" id="specialMark" name="specialMark">
+
+            <label for="lastSeen">Date Last Seen:</label>
+            <input type="date" id="lastSeen" name="lastSeen" required>
+
+            <label for="location">Last Known Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="photo">Upload Pet Photos:</label>
+            <input type="file" id="photo" name="photos" accept="image/*" multiple >
+            <div id="previewContainer"></div>
+
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <div id="shareSection">
+            <p>Share your report:</p>
+            <input type="text" id="reportLink" readonly>
+            <button onclick="copyLink()">Copy Link</button>
+        </div>
+    </div>
+
+    <footer>
+        <h2 id="pettitle">PetPortal</h2>
+    
+        <p class="contact-info">
+            📞 Phone: <a href="tel:9321863490">9321863490</a>  
+            <br>
+            ✉ Email: <a href="mailto:petportal2025@gmail.com">petportal2025@gmail.com</a>
+        </p>
+    
+        <p class="nav-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    
+        <div class="social-icons">
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384065.png" alt="Twitter">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384067.png" alt="Instagram">
+            </a>
+        </div>
+    
+        <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p>
+    </footer>  
+
+    <script src="/js/script.js"></script>
+    <script>
+        async function checkUserLogin() {
+    try {
+        const response = await fetch("/profile");
+        const data = await response.json();
+
+        const authLink = document.getElementById("authLink");
+        if (response.ok) {
+            authLink.textContent = "Logout";
+            authLink.href = "#"; 
+            authLink.onclick = logout;
+        } else {
+            authLink.textContent = "Login";
+            authLink.href = "/html/Login.html";
+            authLink.onclick = null; 
+        }
+    } catch (error) {
+        console.error("Error fetching user:", error);
+        document.getElementById("authLink").textContent = "Login";
+        document.getElementById("authLink").href = "/html/Login.html";
+        // document.getElementById("user-greeting").style.display = "none"; 
+    }
+}
+
+function logout() {
+    fetch('/logout').then(() => {
+        window.location.href = '/'; 
+    });
+}
+
+checkUserLogin();
+    </script>
+</body>
+
+</html>

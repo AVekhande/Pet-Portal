@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets for Adoption</title>
+    <link rel="stylesheet" href="/css/reports.css">
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.1/dist/purify.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+           <img src="/Images/IMG_6936.PNG" width="110" height="90">
+        </div>
+        <div class="nav-links">
+           <a href="/index.html">Home</a>
+           <a href="/html/section.html">Portal</a>
+        </div>
+     </nav>
+
+    <div class="container">
+        <h1>Available Pets for Adoption</h1>
+        <div id="adoptionContainer">
+            <p>Loading adoption listings...</p>
+        </div>
+    </div>
+
+    <footer>
+        <h2 id="pettitle">PetPortal</h2>
+    
+        <p class="contact-info">
+            📞 Phone: <a href="tel:9321863490">9321863490</a>  
+            <br>
+            ✉ Email: <a href="mailto:petportal2025@gmail.com">petportal2025@gmail.com</a>
+        </p>
+    
+        <p class="nav-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    
+        <div class="social-icons">
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384065.png" alt="Twitter">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384067.png" alt="Instagram">
+            </a>
+        </div>
+    
+        <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p>
+    </footer>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('/adoptions'); 
+                if (!response.ok) {
+                    throw new Error('Error fetching adoption data');
+                }
+
+                const data = await response.json(); 
+                const adoptions = data.adoptions; 
+                const adoptionContainer = document.getElementById('adoptionContainer');
+
+                if (adoptions.length === 0) {
+                    adoptionContainer.innerHTML = "<p>No pets available for adoption.</p>";
+                    return;
+                }
+
+                adoptionContainer.innerHTML = adoptions.map(pet => `
+    <div class="adoption-card" id="report-${pet.petId}">
+        <p><strong>Pet ID:</strong> ${DOMPurify.sanitize(pet.petId)}</p>
+        <p><strong>Name:</strong> ${DOMPurify.sanitize(pet.petName)}</p>
+        <p><strong>Type:</strong> ${DOMPurify.sanitize(pet.petType)}</p>
+        <p><strong>Breed:</strong> ${DOMPurify.sanitize(pet.breed)}</p>
+        <p><strong>Age:</strong> ${DOMPurify.sanitize(pet.age)}</p>
+        <p><strong>Description:</strong> ${DOMPurify.sanitize(pet.description)}</p>
+        <h2>Owner Details:</h2>
+        <p><strong>Owner Name:</strong> ${DOMPurify.sanitize(pet.name)}</p>
+        <p><strong>Owner Email:</strong> <a href="mailto:${DOMPurify.sanitize(pet.email)}">${DOMPurify.sanitize(pet.email)}</a></p>
+        <p><strong>Owner Phone:</strong> <a href="tel:${DOMPurify.sanitize(pet.phone)}">${DOMPurify.sanitize(pet.phone)}</a></p>
+        <h2>Photos:</h2>
+        <div class="image-gallery">
+            ${pet.photoUrls.map(photo => `<img src="${DOMPurify.sanitize(photo)}" alt="Pet Photo" class="pet-photo">`).join('')}
+        </div>
+        <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p> 
+        <button class="share-btn" onclick="captureAndShare('${pet.petId}')">Capture & Share</button>
+        <hr>
+    </div>
+`).join('');
+
+            } catch (error) {
+                console.error("Error fetching adoption listings:", error);
+                document.getElementById('adoptionContainer').innerHTML = "<p>Error loading adoption listings.</p>";
+            }
+        });
+
+        function captureAndShare(petId) {
+            let reportDiv = document.getElementById(`report-${petId}`);
+
+            html2canvas(reportDiv).then(canvas => {
+                let image = canvas.toDataURL("image/png");
+
+                let link = document.createElement('a');
+                link.href = image;
+                link.download = `pet_report_${petId}.png`;
+                link.click();
+
+                showShareOptions(image);
+            });
+        }
+    </script>
+
+</body>
+</html>

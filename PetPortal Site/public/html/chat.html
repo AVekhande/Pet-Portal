@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+   <link rel="shortcut icon" type="x-icon" href="/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/chat.css" />
+    <title>Community Chat</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+           <img src="/Images/IMG_6936.PNG" width="110" height="90">
+        </div>
+        <div class="nav-links">
+           <a href="/index.html">Home</a>
+           <a href="/html/section.html">Portal</a>
+           <a href="/html/Login.html"  id="authLink" class="highlight-link">Login</a>
+        </div>
+     </nav>
+
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>Chat Room: <span id="room-name"></span></h1>
+            <a href="/html/chat_ui.html" class="btn-leave">Leave Room</a>
+        </header>
+        <main class="chat-main">
+            <div id="chat-messages" class="chat-messages"></div>
+        </main>
+        <aside class="chat-sidebar">
+            <h2>Users</h2>
+            <ul id="users"></ul>
+        </aside>
+        <footer class="chat-footer">
+            <form id="chat-form">
+                <input id="msg" type="text" placeholder="Enter message" autocomplete="off" required />
+                <button type="submit">Send</button>
+            </form>
+        </footer>
+
+        
+    </div>
+    <footer>
+        <h2 id="pettitle">PetPortal</h2>
+    
+        <p class="contact-info">
+            📞 Phone: <a href="tel:9321863490">9321863490</a>  
+            <br>
+            ✉ Email: <a href="mailto:petportal2025@gmail.com">petportal2025@gmail.com</a>
+        </p>
+    
+        <p class="nav-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    
+        <div class="social-icons">
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384065.png" alt="Twitter">
+            </a>
+            <a href="#" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/24/1384/1384067.png" alt="Instagram">
+            </a>
+        </div>
+    
+        <p class="copyright">&copy; 2025 PetPortal. All Rights Reserved.</p>
+    </footer>  
+    
+    <script src="https://cdn.jsdelivr.net/npm/qs@6.14.0/dist/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js" defer></script>
+</body>
+</html>
