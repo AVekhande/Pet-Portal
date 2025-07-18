@@ -46,6 +46,12 @@ npm i
 # 3. Run the Server
 nodemon app.js
 
+🔑 **API Key Setup**  
+This project requires a Google API key for certain features (e.g., maps, chatbot).  
+To use it, create your own key from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials), and add it as an environment variable or directly in your local code.  
+**Never commit your API key to public repositories.**
+
+
 # Feedback & Contributions :
 Feel free to open issues or pull requests for improvements and new features.
 You can also suggest new features or report bugs in the issues section.
