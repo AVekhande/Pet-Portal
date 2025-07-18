@@ -53,9 +53,9 @@ You can also suggest new features or report bugs in the issues section.
 # Project Contributors
 ### This project was proudly developed by:
 
-##Atharva Vekhande
-## Shubham Pathak
-## Prasad Suryawanshi
-## Pratham Patade
+#### Atharva Vekhande
+#### Shubham Pathak
+#### Prasad Suryawanshi
+#### Pratham Patade
 
 
