@@ -34,19 +34,19 @@ Pet-Portal is a full-featured web platform designed to connect pet lovers, owner
 - Others: uuid, cors, body-parser
 
 # ⚙️ Installation Instructions
-# 1. Clone the Repository
+## 1. Clone the Repository
 
 git clone <your-repo-url>
 cd Pet-Portal
 
-# 2. Install Required Dependencies
+## 2. Install Required Dependencies
 npm install express mongoose bcrypt express-session body-parser nodemailer multer uuid socket.io cors
 npm i
 
-# 3. Run the Server
+## 3. Run the Server
 nodemon app.js
 
-🔑 **API Key Setup**  
+## 🔑 API Key Setup  
 This project requires a Google API key for certain features (e.g., maps, chatbot).  
 To use it, create your own key from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials), and add it as an environment variable or directly in your local code.  
 **Never commit your API key to public repositories.**
